@@ -32,7 +32,7 @@ coordpairs=list(zip(longitudes,latitudes))
 
 # Create a shapely Polygon using the 'coordpairs' -list
 # YOUR CODE HERE 2 
-poly = None
+poly = Polygon(coordpairs)
 
 # CODE FOR TESTING YOUR SOLUTION
 
