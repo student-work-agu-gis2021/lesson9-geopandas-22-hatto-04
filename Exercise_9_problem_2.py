@@ -56,7 +56,7 @@ assert os.path.isfile(fp), "output shapefile does not exist"
 # - **Create a simple map of the points** using the `plot()` -funtion. 
 
 # YOUR CODE HERE 3
-
+geo.plot()
 # Well done! Now you can move on to Exercise_9_problem_3.
 
 def func5():
