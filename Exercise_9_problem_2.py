@@ -14,6 +14,9 @@ from shapely.geometry import Point
 data = pd.read_csv('data/some_posts.csv')
 data["geometry"]=""
 
+for i,r in data.itterrows():
+  x=Point(r["lat"],r["lon"])
+  data.at[i,"geometry"]=x
 
 # CODE FOR TESTING YOUR SOLUTION
 
@@ -30,7 +33,7 @@ print(data['geometry'].head())
 # YOUR CODE HERE 2
 import geopandas as gpd
 from pyproj import CRS
-
+geo=gpd.GeoDataFrame
 # Convert DataFrame into a GeoDataFrame
 geo=None
 # CODE FOR TESTING YOUR SOLUTION
