@@ -33,7 +33,9 @@ print(data['geometry'].head())
 # YOUR CODE HERE 2
 import geopandas as gpd
 from pyproj import CRS
-geo=gpd.GeoDataFrame
+geo=gpd.GeoDataFrame(data,geometry='geometry',crs=CRS.from_epsg(4326).to_wkt())
+fp='Kruger_posts.shp'
+geo.to_file(fp)
 # Convert DataFrame into a GeoDataFrame
 geo=None
 # CODE FOR TESTING YOUR SOLUTION
